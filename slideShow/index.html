@@ -24,7 +24,7 @@
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: 200% 50%;
     background-size: contain;
     background-color: black;
     opacity: 1;
@@ -82,7 +82,7 @@ var goPrev = function(){
   }
   else{
   if (animation ==="swipe"){
-    $("#slide" + next).stop().css({"background-position" : "-100% 50%"}, 10);//fix here  
+    $("#slide" + next).stop().css({"background-position" : "-100% 50%"}, 10);
     $("#slide" + currentSlide).stop().css({"background-position":"200% 50%", "opacity" : "0", "transition-duration": 1000 + "ms"}, 1000);
     //$("#slide" + currentSlide).delay(500).css({"background-position": "50% 50%" }).fadeOut(100);
    // $("#slide" + currentSlide).stop().css({"background-position": 0 + "px", "transition-duration": 500 + "ms"}).fadeOut('slow');
@@ -104,12 +104,11 @@ var goNext = function(){
     $("#slide" + next).stop().fadeIn('slow');
   }
   else{
-  if (animation ==="swipe"){//here
+  if (animation ==="swipe"){{//here
     //$("#slide" + currentSlide).stop().css({"background-position":"-100% 50%", "transition-duration": 1500 + "ms"}).fadeOut(1000);
-    $("#slide" + next).stop().css({"background-position" : "200% 50%"}, 10);//fix here
-    $("#slide" + currentSlide).stop().css({"background-position":"-100% 50%", "opacity" : "0", "transition-duration": 1000 + "ms"}, 1000);
+    $("#slide" + next).stop().css({"background-position" : "-100% 50%", "opacity" : "0"}, 10);}
+    $("#slide" + currentSlide).stop().css({"background-position":"200% 50%", "opacity" : "0", "transition-duration": 1000 + "ms"}, 1000);
     $("#slide" + next).stop().css({"background-position" : "50% 50%", "opacity" : "1", "transition-duration": 1000 + "ms"}, 1000).fadeIn(200);
-
   }
   }
   currentSlide = next;
